@@ -1,0 +1,31 @@
+/* Newspaper */
+@font-face {
+    font-family: News;
+    src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); 
+}
+@font-face {
+    font-family: Header;
+    src: url(fonts1/) format("truetype"); 
+}
+@font-face {
+    font-family: Subheads;
+    src: url(fonts1/) format("truetype"); 
+}
+@font-face {
+    font-family: Special;
+    src: url(fonts1/) format("truetype"); 
+}
+body {
+    background-color: grey;
+}
+.page-wrapper {
+    width: 1600px;
+    background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg);
+    margin-left: 9em;
+    border: 2px solid black;
+}
+p {
+    font-family: News, 'Times New Roman', Times, serif;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+}

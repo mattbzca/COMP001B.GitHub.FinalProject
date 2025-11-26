@@ -1,0 +1,47 @@
+/* Ars Interretialis, Art of the Internet */
+@font-face {
+    font-family: London;
+    src: url(fonts1/OldLondon.ttf) format("truetype");
+}
+@font-face {
+    font-family: Med;
+    src: url(fonts1/PfefferMediaeval.otf) format("opentype");
+}
+/* */
+body {
+    background-color: rgba(17, 37, 69, 1);
+}
+header h1 {
+    color: #1AA9E1;
+    font-size: 2.8em;
+}
+header h2 {
+    color: #DD82AB;
+    font-size: 3.3em;
+}
+.page-wrapper {
+    background-image: url();
+    width: 750px;
+}
+/* */
+.intro h3 {
+    color: #FFFEF6;
+    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+}
+#zen-supporting h3 {
+    color: #FFFEF6;
+    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+}
+.intro p {
+    color: #EDDEB4;
+}
+#zen-supporting p {
+    color: #EDDEB4;
+}
+/* */
+p {
+    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    font-family: London, 'Arial Narrow', Arial, sans-serif;
+}
