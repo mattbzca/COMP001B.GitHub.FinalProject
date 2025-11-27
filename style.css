@@ -24,16 +24,20 @@
     src: url(fonts1/MaszynaRoyalDark.ttf) format("truetype"); /*Source path for font */
 }
 @font-face {
-    font-family:; /*Specifies font name */
-    src: url(fonts1/tipocarimbado-Regular.otf) format("opentype"); /*Source path for font */
-}
-@font-face {
     font-family: Preamble; /*Specifies font name */
     src: url(fonts1/HumboldtFraktur-Bold.ttf) format("truetype"); /*Source path for font */
 }
 @font-face {
     font-family: Explanation; /*Specifies font name */
     src: url(fonts1/Offenbacher\ Reform\ CAT.ttf) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family: Participation; /*Specifies font name */
+    src: url(fonts1/Goodfish\ Bd.otf) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family: BoldItalic; /*Specifies font name */
+    src: url(fonts1/Goodfish\ Bd\ It.otf) format("truetype"); /*Source path for font */
 }
 body {
     background-image: url(assets1/body.jpg); /*Background and path for image for outer page */
@@ -75,16 +79,16 @@ header abbr {
     font-weight: bold;   
 }
 .page-wrapper {
-    width: 1200px; /*Establishes all content within 1600px width */
+    width: 1500px; /*Establishes all content within 1600px width */
     background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg); /*Background and path for image resembling a vintage newspaper aesthetic */
-    margin-left: 21em; /*Moves 9em away from the left for centering the newspaper */
+    margin-left: 14em; /*Moves 9em away from the left for centering the newspaper */
 
     /*GRID*/
     display: grid; /* Shows content areas as grid enabled */
     grid-template-areas: "intro intro intro"
                          "sidebar main-supporting main-supporting"
                          "sidebar main-supporting main-supporting";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 3fr;
     grid-template-rows: auto auto auto;
     gap: 0px 0px;
 }
@@ -104,6 +108,7 @@ p {
     margin-top: 0;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    padding-bottom: 0.2em;
     border-right: 2px solid rgba(27, 24, 24, 0.9);
     border-bottom: 1px double rgba(27, 24, 24, 0.9);
     border-bottom-width: 3px;
@@ -119,7 +124,8 @@ p {
     width: 89%;
     text-align: right;
     padding-left: 0.5em;
-    padding-right: 0.68355em;
+    padding-right: 0.8em;
+    padding-top: 0.2em;
     border-right: 2px solid rgba(27, 24, 24, 0.9);
     border-top: 1px double rgba(27, 24, 24, 0.9);
     border-top-width: 3px;
@@ -137,20 +143,124 @@ p {
    margin-block: 0.1em;
    width: 98%;
    text-indent: 1.5em;
+   padding-bottom: 0.5em;
+}
+.preamble p:nth-child(4) {
+    border-bottom: 2px solid rgba(27, 24, 24, 0.9);
 }
 .preamble p::first-letter {
     font-weight: bold;
 }
 .explanation {
-
+    width: 90%;
 }
 .explanation h3 {
     font-family: Explanation, 'Arial Narrow', Arial, sans-serif; /*Explanation uses specified font family */
-    font-size: 2.5em;
+    font-size: 2.4em;
     padding: 0;
     margin: 0;
+    padding-top: 0.5em;
     line-height: 1em;
     margin-bottom: 0.2em;
+}
+.explanation p {
+    font-size: 1.3em;
+    margin: 0;
+    text-indent: 1.5em;
+    padding-bottom: 0.5em;
+}
+.explanation p::first-letter {
+    font-weight: bold;
+}
+.participation h3 {
+    font-family: Participation, 'Arial Narrow', Arial, sans-serif; /*Participation uses specified font family */
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+.participation {
+    width: 98%;
+}
+.participation p {
+    margin: 0;
+    font-size: 1.3em;
+    text-indent: 1.5em;
+    padding-bottom: 0.5em;
+ }
+ .participation p::first-letter {
+    font-weight: bold;
+}
+.benefits h3 {
+    font-family: Participation, 'Arial Narrow', Arial, sans-serif; /*Participation uses specified font family */
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+.benefits {
+    width: 98%;
+}
+.benefits p {
+    margin: 0;
+    font-size: 1.3em;
+    text-indent: 1.5em;
+    padding-bottom: 0.5em;
+ }
+ .benefits p::first-letter {
+    font-weight: bold;
+}
+.requirements h3 {
+    font-family: Participation, 'Arial Narrow', Arial, sans-serif; /*Participation uses specified font family */
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+.requirements {
+    width: 96%;
+}
+.requirements p {
+    margin: 0;
+    font-size: 1.3em;
+    text-indent: 1.5em;
+    padding-bottom: 0.5em;
+ }
+ .requirements p::first-letter {
+    font-weight: bold;
+}
+
+.design-selection, .design-archives, .zen-resources {
+    width: 90%;
+    border-right: 2px solid rgba(27, 24, 24, 0.9);
+}
+.design-selection h3, .design-archives h3, .zen-resources h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Participation, 'Arial Narrow', Arial, sans-serif; /*tipo uses specified font family */
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding-top: 0.5em;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+}
+ul {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+ul li::marker {
+    font-family: Header, 'Arial Narrow Bold', sans-serif
+}
+ul li a {
+    font-size: 1.4em;
+    text-decoration-line: none;
+}
+a {
+    text-decoration-line: underline; /*Removes default underline decoration */
+    font-weight: bold;
+    color: rgba(17, 37, 69, 1);
 }
 
 /* MORE CSS GRID, MAIN GRIDS: Intro, Main-supporting, Sidebar*/
@@ -170,23 +280,26 @@ header {
     display: grid;
     grid-area: main-supporting;
     grid-template-areas: "participation participation explanation"
-                         "benefits benefits explanation"
-                         "requirements requirements footer";
+                         "requirements requirements explanation"
+                         "benefits benefits footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: .7fr 1.3fr 1fr;
     gap: 0px 0px;
 }
 .participation {
     grid-area: participation;
+ 
 }
 .explanation {
     grid-area: explanation;
 }
 .benefits {
     grid-area: benefits;
+
 }
 .requirements {
     grid-area: requirements;
+
 }
 footer {
     grid-area: footer;
