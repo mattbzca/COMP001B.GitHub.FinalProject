@@ -1,4 +1,4 @@
-/* Newspaper */
+/* Newspaper, a medium of many fonts and dedicated sections. */
 @font-face {
     font-family: News; /*Specifies font name */
     src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); /*Source path for font */
@@ -14,6 +14,26 @@
 @font-face {
     font-family: Special; /*Specifies font name */
     src: url(fonts1/) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family: Summary; /*Specifies font name */
+    src: url(fonts1/GCursive.ttf) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family: SummaryDownload; /*Specifies font name */
+    src: url(fonts1/MaszynaRoyalDark.ttf) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family:; /*Specifies font name */
+    src: url(fonts1/tipocarimbado-Regular.otf) format("opentype"); /*Source path for font */
+}
+@font-face {
+    font-family: Preamble; /*Specifies font name */
+    src: url(fonts1/HumboldtFraktur-Bold.ttf) format("truetype"); /*Source path for font */
+}
+@font-face {
+    font-family: Explanation; /*Specifies font name */
+    src: url(fonts1/Offenbacher\ Reform\ CAT.ttf) format("truetype"); /*Source path for font */
 }
 body {
     background-image: url(assets1/body.jpg); /*Background and path for image for outer page */
@@ -33,10 +53,10 @@ header h1 {
     font-family: Header, 'Arial Narrow', Arial, sans-serif; /*CSS ZEN GARDEN uses specified font family */
     font-size: 2.6em; /*Bigger font size for visibility */
     text-align: center; /*CSS ZEN GARDEN is centered */
-    border-top: 3px solid rgb(27, 24, 24); /*Black border on top of CSS ZEN GARDEN */
+    border-top: 3px solid rgba(27, 24, 24, 0.9); /*Black border on top of CSS ZEN GARDEN */
 }
 header[role="banner"] h1 {
-    border-bottom: 3px solid rgb(27, 24, 24); /*Black border on bottom of CSS ZEN GARDEN */
+    border-bottom: 3px solid rgba(27, 24, 24, 0.9); /*Black border on bottom of CSS ZEN GARDEN */
 }
 header h2 {
     font-family: Subheads, 'Arial Narrow', Arial, sans-serif; /*The Beauty of CSS Design uses specified font family */
@@ -46,11 +66,13 @@ header h2 {
     margin-top: -1.5em;
     border-bottom-style: double;
     border-bottom-width: 3.4px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 header abbr {
     text-decoration-line: none; /*Removes default dotted line decoration */
-    border-top: 2.5px ridge rgb(27, 24, 24); /*Replaces dotted line with solid ridge top line */
-    
+    font-style: italic;
+    font-weight: bold;   
 }
 .page-wrapper {
     width: 1200px; /*Establishes all content within 1600px width */
@@ -63,13 +85,72 @@ header abbr {
                          "sidebar main-supporting main-supporting"
                          "sidebar main-supporting main-supporting";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1r;
+    grid-template-rows: auto auto auto;
     gap: 0px 0px;
 }
 p {
     font-family: News, 'Times New Roman', Times, serif; /*Paragraphs uses specified font family */
     letter-spacing: -0.03em; /*Narrows letter spacing to emulate crowded newspaper typography */
     line-height: 1em; /*Shorter line height to emulate crowded newspaper typography */
+}
+.summary p:first-child {
+    font-family: Summary, 'Arial Narrow', Arial, sans-serif; /*Summary uses specified font family */
+    font-weight: bold;
+    font-size: 1.8em;
+    letter-spacing: 0.015em;
+    line-height: 1.1em;
+    width: 89%;
+    text-align: right;
+    margin-top: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-right: 2px solid rgba(27, 24, 24, 0.9);
+    border-bottom: 1px double rgba(27, 24, 24, 0.9);
+    border-bottom-width: 3px;
+}
+.summary abbr {
+    text-decoration-line: none; /*Removes default dotted line decoration */
+    font-style: italic;
+    font-size: 1.1em;
+}
+.summary p:nth-child(2) {
+    font-family: SummaryDownload, 'Arial Narrow', Arial, sans-serif; /*SummaryDownload uses specified font family */
+    font-size: 1.4em;
+    width: 89%;
+    text-align: right;
+    padding-left: 0.5em;
+    padding-right: 0.68355em;
+    border-right: 2px solid rgba(27, 24, 24, 0.9);
+    border-top: 1px double rgba(27, 24, 24, 0.9);
+    border-top-width: 3px;
+}
+.preamble h3 {
+    font-family: Preamble, 'Arial Narrow', Arial, sans-serif; /*Preamble uses specified font family */
+    font-size: 4em;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+}
+.preamble p {
+   font-size: 1.3em;
+   margin-block: 0.1em;
+   width: 98%;
+   text-indent: 1.5em;
+}
+.preamble p::first-letter {
+    font-weight: bold;
+}
+.explanation {
+
+}
+.explanation h3 {
+    font-family: Explanation, 'Arial Narrow', Arial, sans-serif; /*Explanation uses specified font family */
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    margin-bottom: 0.2em;
 }
 
 /* MORE CSS GRID, MAIN GRIDS: Intro, Main-supporting, Sidebar*/
@@ -87,6 +168,7 @@ header {
 /*Main-supporting subgrids*/
 .main.supporting {
     display: grid;
+    grid-area: main-supporting;
     grid-template-areas: "participation participation explanation"
                          "benefits benefits explanation"
                          "requirements requirements footer";
@@ -131,7 +213,7 @@ footer {
     grid-area: wrapper;
     gap: 0px 0px;
 }
-.design-selections {
+.design-selection {
     grid-area: design-selections;
 }
 .design-archives {
