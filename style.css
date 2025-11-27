@@ -20,6 +20,14 @@ body {
 }
 .intro {
     padding-top: 0.1em; /*Space above header's border line */
+    grid-area: intro;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "summary preamble preamble"
+                         "summary preamble preamble";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
 }
 header h1 {
     font-family: Header, 'Arial Narrow', Arial, sans-serif; /*CSS ZEN GARDEN uses specified font family */
@@ -32,19 +40,31 @@ header[role="banner"] h1 {
 }
 header h2 {
     font-family: Subheads, 'Arial Narrow', Arial, sans-serif; /*The Beauty of CSS Design uses specified font family */
-    font-size: 1.5em; /*Bigger font size for visibility */
+    font-size: 1.1em; /*Bigger font size for visibility */
     font-weight: normal; /*Removes bold default weight for readability */
-    
+    text-align: center;
+    margin-top: -1.5em;
+    border-bottom-style: double;
+    border-bottom-width: 3.4px;
 }
 header abbr {
     text-decoration-line: none; /*Removes default dotted line decoration */
-    border-bottom: 2.5px solid rgb(27, 24, 24); /*Replaces dotted line with solid black line */
+    border-top: 2.5px ridge rgb(27, 24, 24); /*Replaces dotted line with solid ridge top line */
     
 }
 .page-wrapper {
-    width: 1600px; /*Establishes all content within 1600px width */
+    width: 1200px; /*Establishes all content within 1600px width */
     background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg); /*Background and path for image resembling a vintage newspaper aesthetic */
-    margin-left: 9em; /*Moves 9em away from the left for centering the newspaper */
+    margin-left: 21em; /*Moves 9em away from the left for centering the newspaper */
+
+    /*GRID*/
+    display: grid; /* Shows content areas as grid enabled */
+    grid-template-areas: "intro intro intro"
+                         "sidebar main-supporting main-supporting"
+                         "sidebar main-supporting main-supporting";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1r;
+    gap: 0px 0px;
 }
 p {
     font-family: News, 'Times New Roman', Times, serif; /*Paragraphs uses specified font family */
@@ -52,4 +72,71 @@ p {
     line-height: 1em; /*Shorter line height to emulate crowded newspaper typography */
 }
 
-/* CSS GRID */
+/* MORE CSS GRID, MAIN GRIDS: Intro, Main-supporting, Sidebar*/
+
+header {
+    grid-area: header
+}
+.summary {
+    grid-area: summary;
+}
+.preamble {
+    grid-area: preamble;
+}
+
+/*Main-supporting subgrids*/
+.main.supporting {
+    display: grid;
+    grid-template-areas: "participation participation explanation"
+                         "benefits benefits explanation"
+                         "requirements requirements footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+}
+.participation {
+    grid-area: participation;
+}
+.explanation {
+    grid-area: explanation;
+}
+.benefits {
+    grid-area: benefits;
+}
+.requirements {
+    grid-area: requirements;
+}
+footer {
+    grid-area: footer;
+}
+
+/*Sidebar subgrids*/
+.sidebar {
+    display: grid;
+    grid-template-areas: "wrapper wrapper wrapper"
+                         "wrapper wrapper wrapper"
+                         "wrapper wrapper wrapper";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: sidebar;
+    gap: 0px 0px;
+}
+.wrapper {
+    display: grid;
+    grid-template-areas: "design-selections design-selections design-selections"
+                         "design-archives design-archives design-archives"
+                         "zen-resources zen-resources zen-resources";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: wrapper;
+    gap: 0px 0px;
+}
+.design-selections {
+    grid-area: design-selections;
+}
+.design-archives {
+    grid-area: design-archives;
+}
+.zen-resources {
+    grid-area: zen-resources;
+}
