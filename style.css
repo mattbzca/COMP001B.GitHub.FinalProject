@@ -1,31 +1,55 @@
 /* Newspaper */
 @font-face {
-    font-family: News;
-    src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); 
+    font-family: News; /*Specifies font name */
+    src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); /*Source path for font */
 }
 @font-face {
-    font-family: Header;
-    src: url(fonts1/) format("truetype"); 
+    font-family: Header; /*Specifies font name */
+    src: url(fonts1/TELETYPE1945-1985.ttf) format("truetype"); /*Source path for font */
 }
 @font-face {
-    font-family: Subheads;
-    src: url(fonts1/) format("truetype"); 
+    font-family: Subheads; /*Specifies font name */
+    src: url(fonts1/RedwaterBankerItalic_PERSONAL_USE.otf) format("opentype"); /*Source path for font */
 }
 @font-face {
-    font-family: Special;
-    src: url(fonts1/) format("truetype"); 
+    font-family: Special; /*Specifies font name */
+    src: url(fonts1/) format("truetype"); /*Source path for font */
 }
 body {
-    background-color: grey;
+    background-image: url(assets1/body.jpg); /*Background and path for image for outer page */
+}
+.intro {
+    padding-top: 0.1em; /*Space above header's border line */
+}
+header h1 {
+    font-family: Header, 'Arial Narrow', Arial, sans-serif; /*CSS ZEN GARDEN uses specified font family */
+    font-size: 2.6em; /*Bigger font size for visibility */
+    text-align: center; /*CSS ZEN GARDEN is centered */
+    border-top: 3px solid rgb(27, 24, 24); /*Black border on top of CSS ZEN GARDEN */
+}
+header[role="banner"] h1 {
+    border-bottom: 3px solid rgb(27, 24, 24); /*Black border on bottom of CSS ZEN GARDEN */
+}
+header h2 {
+    font-family: Subheads, 'Arial Narrow', Arial, sans-serif; /*The Beauty of CSS Design uses specified font family */
+    font-size: 1.5em; /*Bigger font size for visibility */
+    font-weight: normal; /*Removes bold default weight for readability */
+    
+}
+header abbr {
+    text-decoration-line: none; /*Removes default dotted line decoration */
+    border-bottom: 2.5px solid rgb(27, 24, 24); /*Replaces dotted line with solid black line */
+    
 }
 .page-wrapper {
-    width: 1600px;
-    background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg);
-    margin-left: 9em;
-    border: 2px solid black;
+    width: 1600px; /*Establishes all content within 1600px width */
+    background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg); /*Background and path for image resembling a vintage newspaper aesthetic */
+    margin-left: 9em; /*Moves 9em away from the left for centering the newspaper */
 }
 p {
-    font-family: News, 'Times New Roman', Times, serif;
-    letter-spacing: -0.03em;
-    line-height: 1em;
+    font-family: News, 'Times New Roman', Times, serif; /*Paragraphs uses specified font family */
+    letter-spacing: -0.03em; /*Narrows letter spacing to emulate crowded newspaper typography */
+    line-height: 1em; /*Shorter line height to emulate crowded newspaper typography */
 }
+
+/* CSS GRID */
