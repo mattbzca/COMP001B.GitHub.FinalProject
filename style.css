@@ -1,92 +1,92 @@
-/* Newspaper, a medium of many fonts and dedicated sections. */
-@font-face {
+/* Theme: Newspaper, a medium of many attention-grabbing fonts, pictures, and dedicated sections. */
+@font-face { /*Establishes Custom Font*/
     font-family: News; /*Specifies font name */
     src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Header; /*Specifies font name */
     src: url(fonts1/TELETYPE1945-1985.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Subheads; /*Specifies font name */
     src: url(fonts1/RedwaterBankerItalic_PERSONAL_USE.otf) format("opentype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Special; /*Specifies font name */
     src: url(fonts1/) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Summary; /*Specifies font name */
     src: url(fonts1/GCursive.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: SummaryDownload; /*Specifies font name */
     src: url(fonts1/MaszynaRoyalDark.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Preamble; /*Specifies font name */
     src: url(fonts1/HumboldtFraktur-Bold.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Explanation; /*Specifies font name */
     src: url(fonts1/Offenbacher\ Reform\ CAT.ttf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: Participation; /*Specifies font name */
     src: url(fonts1/Goodfish\ Bd.otf) format("truetype"); /*Source path for font */
 }
-@font-face {
+@font-face { /*Establishes Custom Font*/
     font-family: BoldItalic; /*Specifies font name */
     src: url(fonts1/Goodfish\ Bd\ It.otf) format("truetype"); /*Source path for font */
 }
-body {
+body { /*Affects entire page*/
     background-image: url(assets1/body.jpg); /*Background and path for image for outer page */
 }
-.intro {
+.intro { /*Affects first section*/
     padding-top: 0.1em; /*Space above header's border line */
-    grid-area: intro;
-    display: grid;
-    grid-template-areas: "header header header"
-                         "summary preamble preamble"
-                         "summary preamble preamble";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
+    grid-area: intro; /*Specifies parent grid*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "header header header" /*Establishes nested/subgrid areas, specifies 3 columns of header*/
+                         "summary preamble preamble" /*Specifies 1 column of summary, 2 columns of preamble*/
+                         "summary preamble preamble"; /*Specifies 1 column of summary, 2 columns of preamble*/
+    grid-template-columns: 1fr 1fr 1fr; /*Specifies sizing of grid columns, each column is fractionally proportionate*/
+    grid-template-rows: 1fr 1fr 1fr; /*Specifies sizing of grid row, each row is fractionally proportionate*/
+    gap: 0px 0px; /*Specifies sizing of of column and row gutters, here there are no gutters*/
 }
-header h1 {
+header h1 { /*Affects upper header title*/
     font-family: Header, 'Arial Narrow', Arial, sans-serif; /*CSS ZEN GARDEN uses specified font family */
     font-size: 2.6em; /*Bigger font size for visibility */
     text-align: center; /*CSS ZEN GARDEN is centered */
     border-top: 3px solid rgba(27, 24, 24, 0.9); /*Black border on top of CSS ZEN GARDEN */
 }
-header[role="banner"] h1 {
+header[role="banner"] h1 { /*Affects upper header title, separate specificity for different controls as an example*/
     border-bottom: 3px solid rgba(27, 24, 24, 0.9); /*Black border on bottom of CSS ZEN GARDEN */
 }
-header h2 {
+header h2 { /*Affects lower header title*/
     font-family: Subheads, 'Arial Narrow', Arial, sans-serif; /*The Beauty of CSS Design uses specified font family */
     font-size: 1.1em; /*Bigger font size for visibility */
     font-weight: normal; /*Removes bold default weight for readability */
-    text-align: center;
-    margin-top: -1.5em;
-    border-bottom-style: double;
-    border-bottom-width: 3.4px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    text-align: center; /*Centers the text*/
+    margin-top: -1.5em; /*Decreases upper gap between header h2 and header h1*/
+    border-bottom-style: double; /*Makes a doubled line under header h2*/
+    border-bottom-width: 3.4px; /*Increases width of doubled border line for visibility*/
+    letter-spacing: 0.2em; /*Widens space between letters for distinct titling effect*/
+    text-transform: uppercase; /*Forces all letters of h2 to be uppercase*/
 }
-header abbr {
+header abbr { /*Affects 'CSS' of h2*/
     text-decoration-line: none; /*Removes default dotted line decoration */
-    font-style: italic;
-    font-weight: bold;   
+    font-style: italic; /*Makes the font italic*/
+    font-weight: bold; /*Makes the font bold*/
 }
-.page-wrapper {
+.page-wrapper { /*Affects parent container of all the content*/
     width: 1500px; /*Establishes all content within 1600px width */
     background-image: url(assets1/Fresh\ Plain\ White\ Background.jpg); /*Background and path for image resembling a vintage newspaper aesthetic */
     margin-left: 14em; /*Moves 9em away from the left for centering the newspaper */
 
     /*GRID*/
-    display: grid; /* Shows content areas as grid enabled */
-    grid-template-areas: "intro intro intro"
-                         "sidebar main-supporting main-supporting"
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "intro intro intro" /*Establishes grid areas, specifies 3 columns of intro*/
+                         "sidebar main-supporting main-supporting" /*Specifies 1 column of sidebar, 2 columns of main-supporting*/
                          "sidebar main-supporting main-supporting";
     grid-template-columns: 1.3fr 1fr 3fr;
     grid-template-rows: auto auto auto;
@@ -175,6 +175,7 @@ p {
 #zen-explanation::after {
     content: "Object Used In Typing";
     text-align: center;
+    padding-top: 0.5gem;
     font-family: Header, 'Arial Narrow Bold', sans-serif;
     display: block;
     width: 300px;
@@ -291,8 +292,8 @@ header {
 
 /*Main-supporting subgrids*/
 .main.supporting {
-    display: grid;
-    grid-area: main-supporting;
+    display: grid; /*Enables grid layout*/
+    grid-area: main-supporting; /*Specifies parent grid*/
     grid-template-areas: "participation participation explanation"
                          "requirements requirements explanation"
                          "benefits benefits footer";
@@ -321,17 +322,17 @@ footer {
 
 /*Sidebar subgrids*/
 .sidebar {
-    display: grid;
+    display: grid; /*Enables grid layout*/
     grid-template-areas: "wrapper wrapper wrapper"
                          "wrapper wrapper wrapper"
                          "wrapper wrapper wrapper";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-area: sidebar;
+    grid-area: sidebar; /*Specifies parent grid*/
     gap: 0px 0px;
 }
 .wrapper {
-    display: grid;
+    display: grid; /*Enables grid layout*/
     grid-template-areas: "design-selections design-selections design-selections"
                          "design-archives design-archives design-archives"
                          "zen-resources zen-resources zen-resources";
