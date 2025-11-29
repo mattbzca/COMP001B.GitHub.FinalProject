@@ -118,6 +118,20 @@ p {
     font-style: italic; /*Sets font of 'CSS' to Italic*/
     font-size: 1.1em; /*Sets font size to 1.1em which is larger*/
 }
+.summary p { /*Affects all paragraphs of summary*/
+    position: relative; /*Content of .summary paragraph are positioned relative to directional offset*/
+}
+.summary p:first-child::before { /*Affects the first paragraph of .summary, and placement of any content is before the original content */
+    content: ""; /*Placement of pseudo content for background image*/
+    display: block; /*Content shows as block for positioning*/
+    position: absolute; /*Sets absolute positioning of pointer image*/
+    left: 30px; /*Offset measured from the left of the screen */
+    top: 7px; /**Offset measured from the top of the screen*/
+    width: 42px; /*Specifies width for the pointer image*/
+    height: 42px; /*Specifies height for the pointer image*/
+    background: url(assets1/point.png) no-repeat; /*Sets the pointer image, no-repeat prevents repetition of image from appearing*/
+    background-size: contain; /*The image is contained inside with the rest of the original block*/
+}
 .summary p:nth-child(2) { /*Affects second paragraph of .summary, can alternatively be written as .summary p:last-child*/
     font-family: SummaryDownload, 'Arial Narrow', Arial, sans-serif; /*SummaryDownload uses specified font family */
     font-size: 1.4em; /*Sets font size to 1.4em, which is larger*/
@@ -285,73 +299,73 @@ a { /*Affects ALL link text occurrences unless explicitly defined like the one a
 
 /* MORE CSS GRID, MAIN GRIDS: Intro, Main-supporting, Sidebar*/
 
-header {
-    grid-area: header
+header { /*Affects .intro's headers*/
+    grid-area: header /*Specifies sub-grid*/
 }
-.summary {
-    grid-area: summary;
+.summary { /*Affects the two .summary paragraphs*/
+    grid-area: summary; /*Specifies sub-grid*/
 }
-.preamble {
-    grid-area: preamble;
+.preamble { /*Affects the header and three paragraphs of .preamble*/
+    grid-area: preamble; /*Specifies sub-grid*/
 }
 
 /*Main-supporting subgrids*/
-.main.supporting {
+.main.supporting { /**/
     display: grid; /*Enables grid layout*/
     grid-area: main-supporting; /*Specifies parent grid*/
-    grid-template-areas: "participation participation explanation"
-                         "requirements requirements explanation"
-                         "benefits benefits footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .7fr 1.3fr 1fr;
-    gap: 0px 0px;
+    grid-template-areas: "participation participation explanation" /*Nested grid areas, with 2 columns of participation, 1 column of explanation */
+                         "requirements requirements explanation" /*2 columns of requirement, 1 column of explanation*/
+                         "benefits benefits footer"; /*2 columns of benefits, 1 column of footer*/
+    grid-template-columns: 1fr 1fr 1fr; /*each column is proportionate*/
+    grid-template-rows: .7fr 1.3fr 1fr; /*Proportions of respective rows are different in order to follow a distinctive layout*/
+    gap: 0px 0px; /*Removes any gutter*/
 }
-.participation {
-    grid-area: participation;
+.participation { /*Affects header and paragraphs of the participation section*/
+    grid-area: participation; /*Specifies sub-grid*/
  
 }
-.explanation {
-    grid-area: explanation;
+.explanation { /*Affects header and paragraphs of the explanation section*/
+    grid-area: explanation; /*Specifies sub-grid*/
 }
-.benefits {
-    grid-area: benefits;
+.benefits { /*Affects header and paragraphs of the participation section*/
+    grid-area: benefits; /*Specifies sub-grid*/
 
 }
-.requirements {
-    grid-area: requirements;
+.requirements { /*Affects header and paragraphs of the requirements section*/
+    grid-area: requirements; /*Specifies sub-grid*/
 
 }
-footer {
-    grid-area: footer;
+footer { /*Affects the links in the footer*/
+    grid-area: footer; /*Specifies sub-grid*/
 }
 
 /*Sidebar subgrids*/
-.sidebar {
+.sidebar { /**/
     display: grid; /*Enables grid layout*/
-    grid-template-areas: "wrapper wrapper wrapper"
-                         "wrapper wrapper wrapper"
-                         "wrapper wrapper wrapper";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "wrapper wrapper wrapper" /**/
+                         "wrapper wrapper wrapper" /**/
+                         "wrapper wrapper wrapper"; /**/
+    grid-template-columns: 1fr 1fr 1fr; /**/
+    grid-template-rows: 1fr 1fr 1fr; /**/
     grid-area: sidebar; /*Specifies parent grid*/
-    gap: 0px 0px;
+    gap: 0px 0px; /**/
 }
 .wrapper {
     display: grid; /*Enables grid layout*/
-    grid-template-areas: "design-selections design-selections design-selections"
-                         "design-archives design-archives design-archives"
-                         "zen-resources zen-resources zen-resources";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-area: wrapper;
-    gap: 0px 0px;
+    grid-template-areas: "design-selections design-selections design-selections" /**/
+                         "design-archives design-archives design-archives" /**/
+                         "zen-resources zen-resources zen-resources"; /**/
+    grid-template-columns: 1fr 1fr 1fr; /**/
+    grid-template-rows: 1fr 1fr 1fr; /**/
+    grid-area: wrapper; /**/
+    gap: 0px 0px; /**/
 }
-.design-selection {
-    grid-area: design-selections;
+.design-selection { /**/
+    grid-area: design-selections; /*Specifies sub-grid*/
 }
-.design-archives {
-    grid-area: design-archives;
+.design-archives { /**/
+    grid-area: design-archives; /*Specifies sub-grid*/
 }
-.zen-resources {
-    grid-area: zen-resources;
+.zen-resources { /**/
+    grid-area: zen-resources; /*Specifies sub-grid*/
 }
