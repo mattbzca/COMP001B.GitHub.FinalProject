@@ -310,7 +310,7 @@ header { /*Affects .intro's headers*/
 }
 
 /*Main-supporting subgrids*/
-.main.supporting { /**/
+.main.supporting { /*Affects the headers, paragraphs, and footer of .main supporting*/
     display: grid; /*Enables grid layout*/
     grid-area: main-supporting; /*Specifies parent grid*/
     grid-template-areas: "participation participation explanation" /*Nested grid areas, with 2 columns of participation, 1 column of explanation */
@@ -339,33 +339,33 @@ footer { /*Affects the links in the footer*/
     grid-area: footer; /*Specifies sub-grid*/
 }
 
-/*Sidebar subgrids*/
-.sidebar { /**/
+/*Sidebar sub-grids*/
+.sidebar { /*Affects the respective headers and links of .design-selection, .design-archives, .design-resources*/
     display: grid; /*Enables grid layout*/
-    grid-template-areas: "wrapper wrapper wrapper" /**/
-                         "wrapper wrapper wrapper" /**/
-                         "wrapper wrapper wrapper"; /**/
-    grid-template-columns: 1fr 1fr 1fr; /**/
-    grid-template-rows: 1fr 1fr 1fr; /**/
+    grid-template-areas: "wrapper wrapper wrapper" /*Nested grid of .sidebar child, which is wrapper, 3 columns of wrapper*/
+                         "wrapper wrapper wrapper" /*3 columns of wrapper*/
+                         "wrapper wrapper wrapper"; /*3 columns of wrapper*/
+    grid-template-columns: 1fr 1fr 1fr; /*each column is proportionate*/
+    grid-template-rows: 1fr 1fr 1fr; /*each row is proportionate*/
     grid-area: sidebar; /*Specifies parent grid*/
-    gap: 0px 0px; /**/
+    gap: 0px 0px; /*Sets the gap to none*/
 }
-.wrapper {
+.wrapper { /*Affects the contents of the wrapper of the .sidebar*/
     display: grid; /*Enables grid layout*/
-    grid-template-areas: "design-selections design-selections design-selections" /**/
-                         "design-archives design-archives design-archives" /**/
-                         "zen-resources zen-resources zen-resources"; /**/
-    grid-template-columns: 1fr 1fr 1fr; /**/
-    grid-template-rows: 1fr 1fr 1fr; /**/
-    grid-area: wrapper; /**/
-    gap: 0px 0px; /**/
+    grid-template-areas: "design-selections design-selections design-selections" /*Nested grid of a sub-grid, 1 row of design-selections*/
+                         "design-archives design-archives design-archives" /*1 row of design-archives*/
+                         "zen-resources zen-resources zen-resources"; /*1 row of zen-resources*/
+    grid-template-columns: 1fr 1fr 1fr; /*Each column is proportionate*/
+    grid-template-rows: 1fr 1fr 1fr; /*Each row is proportionate*/
+    grid-area: wrapper; /*Specifies sub-grid called wrapper*/
+    gap: 0px 0px; /*Sets gap to none*/
 }
-.design-selection { /**/
+.design-selection { /*Affects headers and paragraphs of .design-selection*/
     grid-area: design-selections; /*Specifies sub-grid*/
 }
-.design-archives { /**/
+.design-archives { /*Affects headers and paragraphs of .design-archives*/
     grid-area: design-archives; /*Specifies sub-grid*/
 }
-.zen-resources { /**/
+.zen-resources { /*Affects headers and paragraphs of .zen-resources*/
     grid-area: zen-resources; /*Specifies sub-grid*/
 }
