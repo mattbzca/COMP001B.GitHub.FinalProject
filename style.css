@@ -270,7 +270,7 @@ ul { /*Affects entire lists */
     list-style-type: upper-roman; /*Roman numerals are used for listing for the aesthetic*/
     list-style-position: inside; /*Entire list is contained within its box, preventing text from flowing out*/
 }
-ul li::marker { /*Affects the listing type and anything below li*/
+ul li::marker { /*Affects the listing type only, aka the marking*/
     font-family: Header, 'Arial Narrow Bold', sans-serif /*Specifies font for the list style type, following the newspaper theme*/
 }
 ul li a { /*Affects the link text*/
