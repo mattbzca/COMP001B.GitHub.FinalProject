@@ -257,7 +257,7 @@ p {
     width: 570px; /*Sets width of this space*/
     height: 300px; /*Sets height of this space*/
     background: url(assets1/cow.png) no-repeat, url(assets1/crab.png) no-repeat; /*Background image of advertisement for the newspaper theme, no-repeat is used to to prevent replication of image*/
-    background-position: 30px center, 240px center; /*Moves the image 30px towards the center*/
+    background-position: 30px center, 240px center; /*Moves the image 30px towards the center, and the second image, 240px.*/
     background-size: contain; /*The background image, the woman, is contained within the specified height and width*/
     border: 2px double rgba(27, 24, 24, 0.9); /*All around the content is a 2 pixel border line to create area distinction*/
     border-width: 3px; /*Width of border is 3 pixels to establish doubling*/
@@ -291,7 +291,7 @@ p {
 }
 .design-selection, .design-archives, .zen-resources, ul li a { /*Affects the link's content of these three sections*/
     font-family: BoldItalic; /*Changes font to a bold, classy style*/
-    line-height: 1.3em; /*Creates separation between links*/
+    line-height: 1.5em; /*Creates separation between links*/
 }
 .design-selection h3, .design-archives h3, .zen-resources h3 { /*Affects the headers of aforementioned sections*/
     text-transform: uppercase; /*All letters are capitalized for stylistic distinction*/

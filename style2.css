@@ -1,48 +1,59 @@
-/* Ars Interretialis, Art of the Internet */
-@font-face {
-    font-family: London;
-    src: url(fonts1/OldLondon.ttf) format("truetype");
+/* Ars Interretialis, Art of the Internet, a Byzantine-era medieval theme*/
+@font-face { /*Establishes Custom Font*/
+    font-family: Pfeffer;  /*Specifies font name */
+    src: url(fonts2/PfefferMediaeval.otf) format("opentype"); /*Source path for font */
 }
-@font-face {
-    font-family: Med;
-    src: url(fonts1/PfefferMediaeval.otf) format("opentype");
+@font-face { /*Establishes Custom Font*/
+    font-family: Vespasian;  /*Specifies font name */
+    src: url(fonts2/Vespasian2018-Regular.otf) format("opentype"); /*Source path for font */
 }
-/* */
-body {
-    background-color: rgba(17, 37, 69, 1);
+@font-face { /*Establishes Custom Font*/
+    font-family: Junicode;  /*Specifies font name */
+    src: url(fonts2/Junicode-Ansund-Regular.otf) format("opentype"); /*Source path for font */
 }
-header h1 {
-    color: #1AA9E1;
-    font-size: 2.8em;
-    background-image: url();
+/*GRIDS*/
+.intro { /*Affects header, preamble, and summary*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "header header header" /*3 columns of header*/
+                         "preamble preamble summary" /*2 columns of preamble,1 of summary*/
+                         "preamble preamble summary"; /*2 columns of preamble, 1 of summary*/
+    grid-template-columns: 1fr 1fr 1fr; /*columns are equal proportions*/
+    grid-template-rows: 1fr 1fr 1fr; /*rows are equal proportions*/
+    grid-area: intro; /*specifies grid area*/
+    gap: 0px 0px; /*gutters are 0 pixels*/
 }
-header h2 {
-    color: #DD82AB;
-    font-size: 3.3em;
+.header { /*Affects the two titles*/
+    grid-area: header; /*Sets sub grid as header*/
 }
-.page-wrapper {
-    background-image: url();
-    width: 750px;
+.summary { /*Affects content of summary*/
+    grid-area: summary; /*Sets sub grid*/
 }
-/* */
-.intro h3 {
-    color: #FFFEF6;
-    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+.preamble { /*Affects content of preamble*/
+    grid-area: preamble; /*Sets sub grid*/
 }
-#zen-supporting h3 {
-    color: #FFFEF6;
-    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+
+
+
+
+
+
+
+/*MISC*/
+body { /*Affects the body contents*/
+    background-image:; /*Background and path for image resembling an ornamental frame*/
 }
-.intro p {
-    color: #EDDEB4;
+.page-wrapper { /*Affects the whole content area of the page*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "intro intro intro" /*3 columns of intro*/
+                        "main-supporting main-supporting sidebar" /*2 main, 1 sidebar column*/
+                        "main-supporting main-supporting sidebar"; /*2 main 1 sidebar column*/
+    grid-template-columns: 1fr 1fr 1fr; /*columns are equally proportionate*/                    
+    grid-template-rows: 1fr 1fr 1fr; /*rows are equally proportionate*/
+    background-image: url(assets2/); /*Background and path for image resembling an ornamental frame*/
+    gap: 0px 0px; /*column and row gutters are 0*/
 }
-#zen-supporting p {
-    color: #EDDEB4;
-}
-/* */
+
 p {
-    font-family: Med, 'Arial Narrow', Arial, sans-serif;
+    font-family: Junicode, Arial, Helvetica, sans-serif;
 }
-header {
-    font-family: London, 'Arial Narrow', Arial, sans-serif;
-}
+
