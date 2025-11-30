@@ -341,25 +341,59 @@ header { /*Affects .intro's headers*/
 }
 footer { /*Affects the links in the footer*/
     grid-area: footer; /*Specifies sub-grid*/
+    margin-left: 1.3em; /*Centers icons to align with photo above*/
 }
 footer a:first-child { /*Affects the first footer link content*/
     display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
     overflow: hidden; /*Prevents page from expanding due to indent*/
     text-indent: -10000000px; /*Hides the text*/
     background: url(assets1/html.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
-    background-size: 100px 100px; /*Makes icon larger*/
+    background-size: contain; /*Makes icon fit into box*/
     padding: 2em; /*Makes proper gap between buttons*/
+    width: 80px; /*Sets size of box*/
+    height: 80px; /*Sets size of box*/
 }
 footer a:nth-child(2) { /*Affects the second footer link content*/
     display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
     overflow: hidden; /*Prevents page from expanding due to indent*/
     text-indent: -10000000px; /*Hides the text*/
-    background: url(assets1/) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
-    background-size: 100px 100px; /*Makes icon larger*/
+    background: url(assets1/css.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
     padding: 2em; /*Makes proper gap between buttons*/
+    width: 80px; /*Sets size of box*/
+    height: 80px; /*Sets size of box*/
 }
-
-
+footer a:nth-child(3) { /*Affects the second footer link content*/
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets1/cc.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 80px; /*Sets size of box*/
+    height: 80px; /*Sets size of box*/
+}
+footer a:nth-child(4) { /*Affects the second footer link content*/
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets1/access.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 80px; /*Sets size of box*/
+    height: 80px; /*Sets size of box*/
+}
+footer a:last-child { /*Affects the second footer link content*/
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets1/gh.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon larger*/
+    width: 80px; /*Sets size of box*/
+    height: 80px; /*Sets size of box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    padding-left: 170px; /*Centers icon for visual flow*/
+}
 
 /*Sidebar sub-grids*/
 .sidebar { /*Affects the respective headers and links of .design-selection, .design-archives, .design-resources*/
