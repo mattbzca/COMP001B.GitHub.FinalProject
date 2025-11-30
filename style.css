@@ -1,4 +1,4 @@
-/* Theme: Newspaper, a medium of many attention-grabbing fonts, pictures, and dedicated sections. */
+/* Theme: Newspaper, a medium of many attention-grabbing fonts (historically used for visual distinctions), pictures, and dedicated sections.*/
 @font-face { /*Establishes Custom Font*/
     font-family: News; /*Specifies font name */
     src: url(fonts1/OldNewspaperTypes.ttf) format("truetype"); /*Source path for font */
@@ -10,10 +10,6 @@
 @font-face { /*Establishes Custom Font*/
     font-family: Subheads; /*Specifies font name */
     src: url(fonts1/RedwaterBankerItalic_PERSONAL_USE.otf) format("opentype"); /*Source path for font */
-}
-@font-face { /*Establishes Custom Font*/
-    font-family: Special; /*Specifies font name */
-    src: url(fonts1/) format("truetype"); /*Source path for font */
 }
 @font-face { /*Establishes Custom Font*/
     font-family: Summary; /*Specifies font name */
@@ -33,11 +29,11 @@
 }
 @font-face { /*Establishes Custom Font*/
     font-family: Participation; /*Specifies font name */
-    src: url(fonts1/Goodfish\ Bd.otf) format("truetype"); /*Source path for font */
+    src: url(fonts1/Goodfish\ Bd.otf) format("opentype"); /*Source path for font */
 }
 @font-face { /*Establishes Custom Font*/
     font-family: BoldItalic; /*Specifies font name */
-    src: url(fonts1/Goodfish\ Bd\ It.otf) format("truetype"); /*Source path for font */
+    src: url(fonts1/Goodfish\ Bd\ It.otf) format("opentype"); /*Source path for font */
 }
 body { /*Affects entire page*/
     background-image: url(assets1/body.jpg); /*Background and path for image for outer page */
@@ -159,14 +155,16 @@ p {
    text-indent: 1.5em; /*Sets indent of each first line of the paragraphs to 1.5em*/
    padding-bottom: 0.5em; /*Sets bottom padding to 0.5em to make space between paragraphs*/
 }
-.preamble p:nth-child(4) { /*Affects the 4th paragraph of the preamble*/
-    border-bottom: 2px solid rgba(27, 24, 24, 0.9); /*Creates a 2 pixel solid black bottom border line for the 4th paragraph*/
+.preamble p:nth-child(4) { /*Affects space after the preamble paragraphs*/
+    border-bottom: 1px solid rgba(27, 24, 24, 0.9); /*Creates a 1 pixel solid black bottom border line for the 4th paragraph*/
 }
 .preamble p::first-letter { /*Affects the first letter of each paragraph in preamble*/
     font-weight: bold; /*Sets text weight to bold*/
 }
 .explanation { /*Affects the entire "So What is This About" section*/
     width: 90%; /*Sets width to 90% to prevent collision of content*/
+    border-left: 1px solid black; /*Sets border line to separate from main-supporting sections*/
+    padding-left: 1em; /*Moves paragraph text to the right to prevent it from touching the border*/
 }
 .explanation h3 { /*Affects header of explanation*/
     font-family: Explanation, 'Arial Narrow', Arial, sans-serif; /*Explanation uses specified font family */
@@ -178,7 +176,7 @@ p {
     margin-bottom: 0.2em; /*Sets bottom margin to 0.2em to create space between header and its paragraphs */
 }
 .explanation p { /*Affects paragraphs from the explanation section*/
-    font-size: 1.3em; /*Sets text size to 1.3em for consistency of layout given other paragraphs*/
+    font-size: 1.5em; /*Sets text size to 1.5em for visual distinction*/
     margin: 0; /*Resets margin to narrow paragraph boxes, makes them closer to each other*/
     text-indent: 1.5em; /*Sets the text indent of each paragraph to 1.5em for consistency*/
     padding-bottom: 0.5em; /*Sets bottom padding to 0.5em to create some space between paragraphs*/
@@ -198,7 +196,7 @@ p {
     background-size: contain; /*The background image, the typewriter, is contained within the specified height and width*/
     border: 2px double rgba(27, 24, 24, 0.9); /*All around the content is a 2 pixel border line to create area distinction*/
     border-width: 3px; /*Width of border is 3 pixels to establish doubling*/
-    margin-top: 2em; /*Creates 2em of top margin to separate after-content and explanation paragraphs */
+    margin-top: 3em; /*Creates 3em of top margin to separate after-content and explanation paragraphs */
     margin-left: 1em; /*Creates 1em of left margin to align whole content block into center*/
 }
 .participation h3 { /*Affects header of participation section*/
@@ -207,8 +205,8 @@ p {
     letter-spacing: 0.1em; /*Widens spacing between letters to create newspaper's crowding effect*/
     margin: 0; /*Resets margin*/
     margin-bottom: 0.2em; /*Bottom margin makes space between header and following paragraphs*/
-    border-top: 2px solid black; /*makes a 2 pixel solid black border top line to maintain content box separation*/
     margin-top: -4px; /* Brings header border line align with the other border line*/
+    text-align: center; /*Aligns header in the middle*/
 }
 .participation { /*Affects all of the participation section*/
     width: 98%; /*Sets width to prevent content collision*/
@@ -219,7 +217,7 @@ p {
     text-indent: 1.5em; /*Again, provides consistency and readability*/
     padding-bottom: 0.5em; /*Creates bottom space between paragraphs*/
  }
- .participation p::first-letter { /*Affects the first letter of the paragraphs of participation*/
+.participation p::first-letter { /*Affects the first letter of the paragraphs of participation*/
     font-weight: bold; /*Provides consistency and readability*/
 }
 .benefits h3 { /*Affects header of the benefits section*/
@@ -228,9 +226,13 @@ p {
     letter-spacing: 0.1em; /*Widens spacing between letters*/
     margin: 0; /*Resets margin to bring */
     margin-bottom: 0.2em; /*Makes space between header and its paragraphs*/
+    text-align: center; /*Aligns header in the middle*/
 }
 .benefits { /*Affects the whole benefits section*/
     width: 98%; /*Prevents collision with other content and creates consistency*/
+    margin-top: -1.3em; /*Brings header closer to previous content box above*/
+    border-right: 1px solid black; /*Creates border to separate from the footer links*/
+    padding-right: 15px; /*Aligns the border line to match the .explanation's left border line*/
 }
 .benefits p { /*Affects the paragraphs of benefits*/
     margin: 0; /*Brings paragraph closer to header*/
@@ -238,8 +240,29 @@ p {
     text-indent: 1.5em; /*Provides consistency and readability*/
     padding-bottom: 0.5em; /*Space between bottom of paragraph and other distinct contents*/
  }
- .benefits p::first-letter { /*Affects first letter of the paragraph of benefits*/
+.benefits p::first-letter { /*Affects first letter of the paragraph of benefits*/
     font-weight: bold; /*Provides consistency and readability*/
+}
+.benefits p::after { /*Affects content after the paragraphs from .benefits*/
+    content: "vacant spot"; /*Custom Caption for style purposes: Advertisement vacancy*/
+    writing-mode: vertical-rl; /*Sets content text vertically, moves it to the right side*/
+    padding-right: 90px; /*Sets right side border line end, compensating position with width*/
+    font-weight: bold; /*Font weight is bold for visibility*/
+    font-size: 1.1em; /*Text becomes larger*/
+    letter-spacing: 0.2em; /*content text becomes wider of visibility*/
+    text-orientation: upright; /*The content letters appear in regular upright position while it descends vertically*/
+    padding-top: 0.5em; /*Creates padding to make gap between content and upper border line*/
+    font-family: Header, 'Arial Narrow Bold', sans-serif; /*Specifies fonts for the content*/
+    display: block; /*Establishes all content including the image to be styled as a block*/
+    width: 570px; /*Sets width of this space*/
+    height: 300px; /*Sets height of this space*/
+    background: url(assets1/cow.png) no-repeat, url(assets1/crab.png) no-repeat; /*Background image of advertisement for the newspaper theme, no-repeat is used to to prevent replication of image*/
+    background-position: 30px center, 240px center; /*Moves the image 30px towards the center*/
+    background-size: contain; /*The background image, the woman, is contained within the specified height and width*/
+    border: 2px double rgba(27, 24, 24, 0.9); /*All around the content is a 2 pixel border line to create area distinction*/
+    border-width: 3px; /*Width of border is 3 pixels to establish doubling*/
+    margin-top: 1em; /*Creates 2em of top margin to separate after-content and explanation paragraphs */
+    margin-left: 1em; /*Creates 1em of left margin to align whole content block into center*/
 }
 .requirements h3 { /*Affects header of requirements section*/
     font-family: Participation, 'Arial Narrow', Arial, sans-serif; /*Participation uses specified font family */
@@ -247,6 +270,7 @@ p {
     letter-spacing: 0.1em; /*Widens spacing between letters for newspaper styling*/
     margin: 0; /*Brings content box closer to other boxes*/
     margin-bottom: 0.2em; /*Space between header and paragraphs are created*/
+    text-align: center; /*Aligns header in the middle*/
 }
 .requirements { /*Affects the requirements section*/
     width: 96%; /*Prevents content collision*/
@@ -326,22 +350,19 @@ header { /*Affects .intro's headers*/
 }
 .participation { /*Affects header and paragraphs of the participation section*/
     grid-area: participation; /*Specifies sub-grid*/
- 
 }
 .explanation { /*Affects header and paragraphs of the explanation section*/
     grid-area: explanation; /*Specifies sub-grid*/
 }
 .benefits { /*Affects header and paragraphs of the participation section*/
     grid-area: benefits; /*Specifies sub-grid*/
-
 }
 .requirements { /*Affects header and paragraphs of the requirements section*/
     grid-area: requirements; /*Specifies sub-grid*/
-
 }
 footer { /*Affects the links in the footer*/
     grid-area: footer; /*Specifies sub-grid*/
-    margin-left: 1.3em; /*Centers icons to align with photo above*/
+    margin-left: 2.5em; /*Centers icons to align with photo above*/
 }
 footer a:first-child { /*Affects the first footer link content*/
     display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
@@ -422,7 +443,7 @@ footer a:last-child { /*Affects the second footer link content*/
 .design-archives { /*Affects headers and paragraphs of .design-archives*/
     grid-area: design-archives; /*Specifies sub-grid*/
 }
-.design-archives::after {
+.design-archives::after { /*Affects content after header and list*/
     content: "Astrid Illustrators ~ JOIN NOW"; /*Custom Caption for style purposes*/
     text-align: center; /*Aligns content text to center to align with photo*/
     padding-top: 0.5em; /*Creates padding to make gap between content and upper border line*/
