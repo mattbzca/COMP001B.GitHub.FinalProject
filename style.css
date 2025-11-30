@@ -265,6 +265,10 @@ p {
     width: 90%; /*Prevents content collision*/
     border-right: 2px solid rgba(27, 24, 24, 0.9); /*Creates a border line on the right for distinction of space*/
 }
+.design-selection, .design-archives, .zen-resources, ul li a { /*Affects the link's content of these three sections*/
+    font-family: BoldItalic; /*Changes font to a bold, classy style*/
+    line-height: 1.3em; /*Creates separation between links*/
+}
 .design-selection h3, .design-archives h3, .zen-resources h3 { /*Affects the headers of aforementioned sections*/
     text-transform: uppercase; /*All letters are capitalized for stylistic distinction*/
     text-align: center; /*text is centered to prevent from touching the page border*/
@@ -338,6 +342,24 @@ header { /*Affects .intro's headers*/
 footer { /*Affects the links in the footer*/
     grid-area: footer; /*Specifies sub-grid*/
 }
+footer a:first-child { /*Affects the first footer link content*/
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets1/html.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: 100px 100px; /*Makes icon larger*/
+    padding: 2em; /*Makes proper gap between buttons*/
+}
+footer a:nth-child(2) { /*Affects the second footer link content*/
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets1/) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: 100px 100px; /*Makes icon larger*/
+    padding: 2em; /*Makes proper gap between buttons*/
+}
+
+
 
 /*Sidebar sub-grids*/
 .sidebar { /*Affects the respective headers and links of .design-selection, .design-archives, .design-resources*/
@@ -365,6 +387,22 @@ footer { /*Affects the links in the footer*/
 }
 .design-archives { /*Affects headers and paragraphs of .design-archives*/
     grid-area: design-archives; /*Specifies sub-grid*/
+}
+.design-archives::after {
+    content: "Astrid Illustrators ~ JOIN NOW"; /*Custom Caption for style purposes*/
+    text-align: center; /*Aligns content text to center to align with photo*/
+    padding-top: 0.5em; /*Creates padding to make gap between content and upper border line*/
+    font-family: Header, 'Arial Narrow Bold', sans-serif; /*Specifies fonts for the content*/
+    display: block; /*Establishes all content including the image to be styled as a block*/
+    width: 300px; /*Sets width of this space*/
+    height: 300px; /*Sets height of this space*/
+    background: url(assets1/ad.png) no-repeat; /*Background image of advertisement for the newspaper theme, no-repeat is used to to prevent replication of image*/
+    background-position: 30px center; /*Moves the image 30px towards the center*/
+    background-size: contain; /*The background image, the woman, is contained within the specified height and width*/
+    border: 2px double rgba(27, 24, 24, 0.9); /*All around the content is a 2 pixel border line to create area distinction*/
+    border-width: 3px; /*Width of border is 3 pixels to establish doubling*/
+    margin-top: 2em; /*Creates 2em of top margin to separate after-content and explanation paragraphs */
+    margin-left: 1em; /*Creates 1em of left margin to align whole content block into center*/
 }
 .zen-resources { /*Affects headers and paragraphs of .zen-resources*/
     grid-area: zen-resources; /*Specifies sub-grid*/
