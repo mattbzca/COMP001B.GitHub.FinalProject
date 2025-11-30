@@ -25,11 +25,65 @@
 .header { /*Affects the two titles*/
     grid-area: header; /*Sets sub grid as header*/
 }
+.preamble { /*Affects content of preamble*/
+    grid-area: preamble; /*Sets sub grid*/
+}
 .summary { /*Affects content of summary*/
     grid-area: summary; /*Sets sub grid*/
 }
-.preamble { /*Affects content of preamble*/
-    grid-area: preamble; /*Sets sub grid*/
+.main.supporting { /*Affects their contents*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "requirements requirements participation" /*2 requirement, 1 participation column*/
+                         "explanation explanation participation" /*2 explanation, 1 participation column*/
+                         "benefits footer footer"; /*1 benefit, 2 footer columns*/
+    grid-template-columns: 1fr 1fr 1fr; /*columns are equal proportions*/
+    grid-template-rows: 1.4fr 1.2fr 0.4fr; /*the first row is largest, 2nd, then third*/
+    grid-area: main-supporting; /*specifies grid area name*/
+    gap: 8px 8px; /*no gutters*/ 
+}
+.requirements { /*Affects their contents*/
+    grid-area: requirements; /*Name of grid area*/
+}
+.participation { /*Affects their contents*/
+    grid-area: participation; /*Name of grid area*/
+}
+.explanation { /*Affects their contents*/
+    grid-area: explanation; /*Name of grid area*/
+}
+.benefits { /*Affects their contents*/
+    grid-area: benefits; /*Name of grid area*/
+}
+.footer { /*Affects their contents*/
+    grid-area: footer; /*Name of grid area*/
+}
+.sidebar { /*Affects their contents*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "wrapper wrapper wrapper" /*subgrid of sidebar, 3 columns of wrapper*/
+                         "wrapper wrapper wrapper" /*3 wrapper cols*/
+                         "wrapper wrapper wrapper"; /*3 wrapper cols*/
+    grid-template-columns: 1fr 1fr 1fr; /*proportionate cols*/ 
+    grid-template-rows: 1fr 1fr 1fr; /*proportionate rows*/
+    gap: 0px 0px; /*No gutters*/
+    grid-area: sidebar; /*Name of grid area*/
+}
+.wrapper { /*Affects their contents*/
+    display: grid; /*Enables grid layout*/
+    grid-template-areas: "design-archives design-archives design-archives" /*specifies 3 column layout*/
+                         "zen-resources zen-resources zen-resources" /*3 column layout*/
+                         "design-selection design-selection design-selection"; /*3 column layout*/
+    grid-template-columns: 1fr 1fr 1fr; /*proportionate cols*/
+    grid-template-rows: 1fr 1fr 1fr; /*proportionate rows*/
+    gap: 0px 0px; /*No gutters*/
+    grid-area: wrapper; /*Name of grid area*/
+}
+.design-archives {
+    grid-area: design-archives;
+}
+.zen-resources {
+    grid-area: zen-resources;
+}
+.design-selection {
+    grid-area: design-selection;
 }
 
 
@@ -40,7 +94,7 @@
 
 /*MISC*/
 body { /*Affects the body contents*/
-    background-image:; /*Background and path for image resembling an ornamental frame*/
+    background: linear-gradient(90deg,rgba(161, 2, 2, 1) 0%, rgba(122, 1, 1, 1) 50%, rgba(255, 0, 0, 1) 100%);
 }
 .page-wrapper { /*Affects the whole content area of the page*/
     display: grid; /*Enables grid layout*/
@@ -55,5 +109,14 @@ body { /*Affects the body contents*/
 
 p {
     font-family: Junicode, Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-family: Vespasian, Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-family: Vespasian, Arial, Helvetica, sans-serif;
+}
+h3 {
+    font-family: Pfeffer, Arial, Helvetica, sans-serif;
 }
 
