@@ -56,64 +56,64 @@ a:hover { /*Affects link text when you hover your mouse over it*/
     background-color: rgba(70, 24, 24, 0.5); /*background color when you hover over the link*/
     border-radius: 10px; /*smooths out the borders from the background*/
 }
-.sidebar ul {
-    list-style-type:lower-alpha;
-    font-family: Nightmare;
-    font-size: 1.4em;
-    color: rgb(155, 143, 143);
-    list-style-position: inside;
-    text-align: left;
-    padding-inline-start: 0;
-    padding-left: 20px;
+.sidebar ul { /*Affects the ul of all sidebar links*/
+    list-style-type:lower-alpha; /*Listing uses undercase alphabets*/
+    font-family: Nightmare; /*ul alphas use this font*/
+    font-size: 1.4em; /*makes the font bigger*/
+    color: rgb(155, 143, 143); /*changes the color of the alphas*/
+    list-style-position: inside; /*sets the alphas within the <a> content line instead of outside*/
+    text-align: left; /*aligns the links to the left*/
+    padding-inline-start: 0; /*resets the paddings between alphas and <a>*/
+    padding-left: 20px; /*Manual 20px padding, moving the text towards the right*/
 }
-.sidebar a {
-    color: rgb(253, 157, 157);
-    letter-spacing: -0.1em;
-    font-size: 1.1em;
+.sidebar a { /*Affects the content text, or the hyperlinks*/
+    color: rgb(253, 157, 157); /*changes the color of the text*/
+    letter-spacing: -0.1em; /*Compacts lettering for better readability*/
+    font-size: 1.1em; /*makes text larger*/
 }
-.sidebar h3 {
-    color: black;
-    text-transform: uppercase;
-    font-size: 2.3em;
-    border-bottom: 2px double black;
-    border-width: 5px;
+.sidebar h3 { /*Affects each headers of the sidebar*/
+    color: black; /*changes header text color to black*/
+    text-transform: uppercase; /*changes each character to capitalized letters*/
+    font-size: 2.3em; /*makes text larger*/
+    border-bottom: 2px double black; /*border bottom is a double line to separate title and links*/
+    border-width: 5px; /*makes the double border lines larger*/
 }
-abbr {
-    text-decoration-line: none;
-    font-weight: bold;
+abbr { /*Affects the "CSS" abbreviations*/
+    text-decoration-line: none; /*Removes the default dotted line*/
+    font-weight: bold; /*Bolds the abbreviation for readability*/
 }
 .summary { /*Affects content of summary*/
     grid-area: summary; /*Sets sub grid*/
-    text-align: right;
-    padding-right: 2em;
+    text-align: right; /*Since the content is settled to the very right without any header, its best to align it towards the outside borders for visual appeal*/
+    padding-right: 2em; /*Makes space between the outside border and the content*/
 }
-.summary p {
-    font-size: 2em;
+.summary p { /*Affects the paragraphs of the summary*/
+    font-size: 2em; /*Makes text bigger*/
 }
-p::first-letter {
-    font-size: 1.4em;
-    font-family: Initials, Arial, Helvetica, sans-serif;
+p::first-letter { /*Affects only the first letter of each paragraph*/
+    font-size: 1.4em; /*Makes text bigger*/
+    font-family: Initials, Arial, Helvetica, sans-serif; /*Specifies special font for the first letter*/
 }
-.preamble h3, .requirements h3, .explanation h3, .participation h3, .benefits h3 {
-    padding-left: 2em;
-    font-size: 2em;
-    color: #D3BDB0;
-    margin-top: 0;
-    margin-top: 0.5em;
+.preamble h3, .requirements h3, .explanation h3, .participation h3, .benefits h3 { /*Affects those sections and their headers*/
+    padding-left: 2em; /*Makes gap between header and outer borders for visual consistency*/
+    font-size: 2em; /*makes text bigger*/
+    color: #D3BDB0; /*sets color of header text*/
+    margin-top: 0; /*resets top margins to bring it closer to other content boxes*/
+    margin-top: 0.5em; /*sets the margins manually to 0.5em, making a gap between other boxes and the headers*/
 }
 
-.preamble p, .requirements p, .explanation p, .participation p, .benefits p {
-    padding-left: 2em;
-    font-size: 1.13em;  
+.preamble p, .requirements p, .explanation p, .participation p, .benefits p { /*Affects all those sections and their paragraphs*/
+    padding-left: 2em; /*Makes gap between outer borders and content*/
+    font-size: 1.13em; /*makes text bigger*/
 }
-.participation p {
-    width: 200px;
+.participation p { /*Affects participation section's paragraph*/
+    width: 200px; /*Since the grid area is more constricted, a narrower width is needed for text organization*/
 }
-.participation h3 {
-    margin-left: -20px;
+.participation h3 { /*Affects the header of the participation section*/
+    margin-left: -20px; /*Makes an header indent of 20px*/
 }
-.preamble, .requirements, .explanation, .participation, .benefits, .summary, footer {
-    border: 2px solid rgba(128, 0, 0, 0.5);
+.preamble, .requirements, .explanation, .participation, .benefits, .summary, footer { /*Affects all those sections and their related content*/
+    border: 2px solid rgba(128, 0, 0, 0.5); /*Creates an outer dark red border for visual appeal and contrast*/
 }
 
 .main.supporting { /*Affects their contents*/
@@ -140,8 +140,8 @@ p::first-letter {
 }
 footer { /*Affects their contents*/
     grid-area: footer; /*Name of grid area*/
-    text-align: center;
-    padding-top: 2em;
+    text-align: center;  /*Aligns images to the center*/
+    padding-top: 2em; /*Gap between upper border line and images*/
 }
 footer a:nth-child(1) {
     display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
@@ -202,9 +202,9 @@ footer a:nth-child(5) {
     grid-template-rows: 1fr 1fr 1fr; /*proportionate rows*/
     gap: 0px 0px; /*No gutters*/
     grid-area: sidebar; /*Name of grid area*/
-    background: url(assets2/sidebar.jpg);
-    border: 10px solid rgba(0, 0, 0, 0.5);
-    text-align: center;
+    background: url(assets2/sidebar.jpg); /*Red textured image for the sidebar*/
+    border: 10px solid rgba(0, 0, 0, 0.5); /*Creates a semi-translucent dark red and black border line for additional contrast*/
+    text-align: center; /*Centers everything*/
 }
 .wrapper { /*Affects their contents*/
     display: grid; /*Enables grid layout*/
@@ -216,26 +216,21 @@ footer a:nth-child(5) {
     gap: 0px 0px; /*No gutters*/
     grid-area: wrapper; /*Name of grid area*/
 }
-.design-archives {
-    grid-area: design-archives;
+.design-archives { /*Affects the paragraphs and headers of section*/
+    grid-area: design-archives; /*Name of subgrid area*/
 }
-.zen-resources {
-    grid-area: zen-resources;
+.zen-resources { /*Affects the paragraphs and headers of section*/
+    grid-area: zen-resources; /*Name of subgrid area*/
 }
-.design-selection {
-    grid-area: design-selection;
+.design-selection { /*Affects the paragraphs and headers of section*/
+    grid-area: design-selection; /*Name of subgrid area*/
 }
-
-
-
-
-
 
 
 /*MISC*/
 body { /*Affects the body contents*/
-    background-image: url(assets2/Little\ tapestry\ flowers.jpg);
-    color: #F6E3AD;
+    background-image: url(assets2/Little\ tapestry\ flowers.jpg); /*Sets tapestry image on outer page*/
+    color: #F6E3AD; /*Sets default color unless overruled*/
 }
 .page-wrapper { /*Affects the whole content area of the page*/
     display: grid; /*Enables grid layout*/
@@ -245,62 +240,62 @@ body { /*Affects the body contents*/
     grid-template-columns: 1fr 1.3fr 0.7fr; /*columns are equally proportionate*/                    
     grid-template-rows: 1fr 1fr 1fr; /*rows are equally proportionate*/
     background-image: url(assets2/download\ \(4\).jpg); /*Background and path for image resembling an ornamental frame*/
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    margin-left: 20em;
-    width: 1200px;
-    height: 2100px;
-    border-radius: 70px 70px 0px 0px;
+    background-repeat: no-repeat; /*the black tapestry image doesnt repeat*/
+    background-size: 100% 100%; /*sets the image to max always*/
+    background-position: center; /*centers the background*/
+    margin-left: 20em; /*Moves entire contents to the center*/
+    width: 1200px; /*Specifies container width*/
+    height: 2100px; /*Specifies container height*/
+    border-radius: 70px 70px 0px 0px; /*Matches border radius of header and makes top left and right curve*/
     gap: 0px 0px; /*No gutters*/
 }
 
-p {
-    font-family: Nightmare, Arial, Helvetica, sans-serif;
-    color:rgb(205, 214, 175);
-    width: 500px;
-    text-indent: 1em;
-    padding-right: 1em;
-    line-height: 0.9em;
+p { /*Affects all paragraphs*/
+    font-family: Nightmare, Arial, Helvetica, sans-serif; /*Specifies font*/
+    color:rgb(205, 214, 175); /*paragraph text color*/
+    width: 500px; /*Sets width to appropriate size, away from touching border lines*/
+    text-indent: 1em; /*Indents the beginning of every paragraph*/
+    padding-right: 1em; /*Further separates borders from paragraphs*/
+    line-height: 0.9em; /*Compacts paragraph lines for space*/
 }
-header h1 {
-    text-align: center;
-    font-family: Vespasian, Arial, Helvetica, sans-serif;
-    font-size: 9em;
-    font-weight: normal;
-    letter-spacing: 0.1em;
+header h1 { /*Affects first header title*/
+    text-align: center; /*centers header title*/
+    font-family: Vespasian, Arial, Helvetica, sans-serif; /*Specifies font for the title*/
+    font-size: 9em; /*makes text bigger*/
+    font-weight: normal; /*font weight is lighter than defaulted bold*/
+    letter-spacing: 0.1em; /*Widens spacing for stylistic reading*/
 }
-header h1::after {
-    content: "";
-    display: block;
-    height: 100px;
-    background: url(assets2/output-onlinetools.png) no-repeat center;
+header h1::after { /*Affects the content space after the first title of the headers*/
+    content: ""; /*Makes placeholder spot for image*/
+    display: block; /*displays block for image to appear*/
+    height: 100px; /*sets height of image*/
+    background: url(assets2/output-onlinetools.png) no-repeat center; /*Decorative header ornament background which doesn't repeat and is centered to the header box.*/
 }
 
-header h2 {
-    text-transform: uppercase;
-    color: #3b382a;
-    text-align: center;
-    margin-top: -3em;
-    height: 75px;
-    padding-top: 2.7em;
-    letter-spacing: -0.05em;
-    background-image: url(assets2/banner.png);
-    background-repeat: no-repeat;
-    background-position: center 107px;
-    background-size:770px auto; 
+header h2 { /*Affects the second title of the header section*/
+    text-transform: uppercase; /*Sets all title characters to capitalized letters*/
+    color: #3b382a; /*sets color of 2nd title*/
+    text-align: center; /*centers the text*/
+    margin-top: -3em; /*Brings the content upwards*/
+    height: 75px; /*sets height of the title*/
+    padding-top: 2.7em; /*Aligns image to the text*/
+    letter-spacing: -0.05em; /*Widens the text for readability*/
+    background-image: url(assets2/banner.png); /*Uses a decorative banner*/
+    background-repeat: no-repeat; /*this image doesnt repeat*/
+    background-position: center 107px; /*this image is centered and ensures it moves down 107px for alignment with text*/
+    background-size:770px auto;  /*sets background sizing for the same reasoning for positions*/
 }
-h2 {
-    font-family: Junicode, Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    font-weight: normal;
+h2 { /*Affects the second header title*/
+    font-family: Junicode, Arial, Helvetica, sans-serif; /*Specifies font*/
+    font-size: 3em; /*Makes text larger*/
+    font-weight: normal; /*normal font is used instead of default bold*/
 }
-h3 {
-    font-family: Pfeffer, Arial, Helvetica, sans-serif;
-    margin-bottom: 0;
+h3 { /*Affects all header level 3, mostly found in the main supporting section*/
+    font-family: Pfeffer, Arial, Helvetica, sans-serif; /*Specifies font*/
+    margin-bottom: 0; /*resets bottom margins to bring related paragraphs closer*/
 }
-h3::first-letter {
-    font-family: Initials2, Arial, Helvetica, sans-serif;
-    font-weight: normal;
+h3::first-letter { /*Affects the first letter of each h3*/
+    font-family: Initials2, Arial, Helvetica, sans-serif; /*Changes the first letter with the font*/
+    font-weight: normal; /*Sets font to normal instead of bold because of font visuals looking better unbolded*/
 }
 
