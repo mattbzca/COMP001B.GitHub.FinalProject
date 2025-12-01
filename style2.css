@@ -36,25 +36,25 @@
 }
 header { /*Affects the two titles*/
     grid-area: header; /*Sets sub grid as header*/
-    background-color: #3b382a;
-    background: radial-gradient(circle,rgba(199, 182, 119, 1) 0%, rgba(130, 21, 14, 1) 1%, rgba(122, 1, 1, 1) 11%, rgba(26, 12, 12, 1) 86%);
-    border-radius: 70px 70px 0px 0px;
-    background-image: url(assets2/silhouette.png);
-    background-repeat: no-repeat;
-    background-position: right;
+    background-color: #3b382a; /*Sets color*/
+    background: radial-gradient(circle,rgba(199, 182, 119, 1) 0%, rgba(130, 21, 14, 1) 1%, rgba(122, 1, 1, 1) 11%, rgba(26, 12, 12, 1) 86%); /*Sets gradient of background color for layering under the image*/
+    border-radius: 70px 70px 0px 0px; /*sets top left and right border radius to curve*/
+    background-image: url(assets2/silhouette.png); /*witch or wizard photo for the decorative header*/
+    background-repeat: no-repeat; /*image doesnt repeat*/
+    background-position: right; /*places the image to the right*/
 }
 .preamble { /*Affects content of preamble*/
     grid-area: preamble; /*Sets sub grid*/
 }
-a {
-    text-decoration-line: none;
-    color: green;
+a { /*Affects all occurrences of list contents unless explicitly overridden */
+    text-decoration-line: none; /*No line under the link text*/
+    color: green; /*Sets link color to green*/
+    text-indent: 0; /*Resets indent inherited from <p> indents*/
 }
-a:hover {
-    display: inline-block;
-    transition-duration: 0.4s;
-    background-color: rgba(70, 24, 24, 0.5);
-    border-radius: 10px;
+a:hover { /*Affects link text when you hover your mouse over it*/
+    transition-duration: 0.2s; /*Animation that occurs when you hover*/
+    background-color: rgba(70, 24, 24, 0.5); /*background color when you hover over the link*/
+    border-radius: 10px; /*smooths out the borders from the background*/
 }
 .sidebar ul {
     list-style-type:lower-alpha;
@@ -141,6 +141,57 @@ p::first-letter {
 footer { /*Affects their contents*/
     grid-area: footer; /*Name of grid area*/
     text-align: center;
+    padding-top: 2em;
+}
+footer a:nth-child(1) {
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets2/mushroom.png) no-repeat center; /*HTML image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 10px; /*Sets size of box*/
+    height: 10px; /*Sets size of box*/
+}
+footer a:nth-child(2) {
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets2/candle.png) no-repeat center; /*CSS image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 10px; /*Sets size of box*/
+    height: 10px; /*Sets size of box*/
+}
+footer a:nth-child(3) {
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets2/vase.png) no-repeat center; /*CC image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 10px; /*Sets size of box*/
+    height: 10px; /*Sets size of box*/
+}
+footer a:nth-child(4) {
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets2/skull.png) no-repeat center; /*A11y image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 10px; /*Sets size of box*/
+    height: 10px; /*Sets size of box*/
+}
+footer a:nth-child(5) {
+    display: inline-block; /*Content shows as inline-block for text-indent to work without affecting image*/
+    overflow: hidden; /*Prevents page from expanding due to indent*/
+    text-indent: -10000000px; /*Hides the text*/
+    background: url(assets2/envelope.png) no-repeat center; /*GH image button, doesn't repeat image, centers image in block*/
+    background-size: contain; /*Makes icon fit into box*/
+    padding: 2em; /*Makes proper gap between buttons*/
+    width: 10px; /*Sets size of box*/
+    height: 10px; /*Sets size of box*/
 }
 .sidebar { /*Affects their contents*/
     display: grid; /*Enables grid layout*/
