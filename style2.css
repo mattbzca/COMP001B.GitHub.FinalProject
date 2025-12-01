@@ -1,4 +1,4 @@
-/* Theme: Red*/
+/*Theme: Mysticism*/
 @font-face { /*Establishes Custom Font*/
     font-family: Pfeffer;  /*Specifies font name */
     src: url(fonts2/PfefferMediaeval.otf) format("opentype"); /*Source path for font */
@@ -10,6 +10,18 @@
 @font-face { /*Establishes Custom Font*/
     font-family: Junicode;  /*Specifies font name */
     src: url(fonts2/Junicode-Ansund-Regular.otf) format("opentype"); /*Source path for font */
+}
+@font-face { /*Establishes Custom Font*/
+    font-family: Nightmare;  /*Specifies font name */
+    src: url(fonts2/TypographerRotunda.ttf) format("truetype"); /*Source path for font */
+}
+@font-face { /*Establishes Custom Font*/
+    font-family: Initials;  /*Specifies font name */
+    src: url(fonts2/BritishMuseum.ttf) format("truetype"); /*Source path for font */
+}
+@font-face { /*Establishes Custom Font*/
+    font-family: Initials2;  /*Specifies font name */
+    src: url(fonts2/HeavyRain_PERSONAL_USE_ONLY.ttf) format("truetype"); /*Source path for font */
 }
 /*GRIDS*/
 .intro { /*Affects header, preamble, and summary*/
@@ -27,19 +39,89 @@ header { /*Affects the two titles*/
     background-color: #3b382a;
     background: radial-gradient(circle,rgba(199, 182, 119, 1) 0%, rgba(130, 21, 14, 1) 1%, rgba(122, 1, 1, 1) 11%, rgba(26, 12, 12, 1) 86%);
     border-radius: 70px 70px 0px 0px;
+    background-image: url(assets2/silhouette.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 .preamble { /*Affects content of preamble*/
     grid-area: preamble; /*Sets sub grid*/
 }
+a {
+    text-decoration-line: none;
+    color: green;
+}
+a:hover {
+    display: inline-block;
+    transition-duration: 0.4s;
+    background-color: rgba(70, 24, 24, 0.5);
+    border-radius: 10px;
+}
+.sidebar ul {
+    list-style-type:lower-alpha;
+    font-family: Nightmare;
+    font-size: 1.4em;
+    color: rgb(155, 143, 143);
+    list-style-position: inside;
+    text-align: left;
+    padding-inline-start: 0;
+    padding-left: 20px;
+}
+.sidebar a {
+    color: rgb(253, 157, 157);
+    letter-spacing: -0.1em;
+    font-size: 1.1em;
+}
+.sidebar h3 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    border-bottom: 2px double black;
+    border-width: 5px;
+}
+abbr {
+    text-decoration-line: none;
+    font-weight: bold;
+}
 .summary { /*Affects content of summary*/
     grid-area: summary; /*Sets sub grid*/
+    text-align: right;
+    padding-right: 2em;
 }
+.summary p {
+    font-size: 2em;
+}
+p::first-letter {
+    font-size: 1.4em;
+    font-family: Initials, Arial, Helvetica, sans-serif;
+}
+.preamble h3, .requirements h3, .explanation h3, .participation h3, .benefits h3 {
+    padding-left: 2em;
+    font-size: 2em;
+    color: #D3BDB0;
+    margin-top: 0;
+    margin-top: 0.5em;
+}
+
+.preamble p, .requirements p, .explanation p, .participation p, .benefits p {
+    padding-left: 2em;
+    font-size: 1.13em;  
+}
+.participation p {
+    width: 200px;
+}
+.participation h3 {
+    margin-left: -20px;
+}
+.preamble, .requirements, .explanation, .participation, .benefits, .summary, footer {
+    border: 2px solid rgba(128, 0, 0, 0.5);
+}
+
 .main.supporting { /*Affects their contents*/
     display: grid; /*Enables grid layout*/
     grid-template-areas: "requirements requirements participation" /*2 requirement, 1 participation column*/
                          "explanation explanation participation" /*2 explanation, 1 participation column*/
                          "benefits footer footer"; /*1 benefit, 2 footer columns*/
-    grid-template-columns: 1fr 1fr 1fr; /*columns are equal proportions*/
+    grid-template-columns: 1.6fr 0.4fr 1fr; /*columns are equal proportions*/
     grid-template-rows: 1.4fr 1.2fr 0.4fr; /*the first row is largest, 2nd, then third*/
     grid-area: main-supporting; /*specifies grid area name*/
     gap: 0px 0px; /*No gutters*/ 
@@ -58,6 +140,7 @@ header { /*Affects the two titles*/
 }
 footer { /*Affects their contents*/
     grid-area: footer; /*Name of grid area*/
+    text-align: center;
 }
 .sidebar { /*Affects their contents*/
     display: grid; /*Enables grid layout*/
@@ -70,6 +153,7 @@ footer { /*Affects their contents*/
     grid-area: sidebar; /*Name of grid area*/
     background: url(assets2/sidebar.jpg);
     border: 10px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 .wrapper { /*Affects their contents*/
     display: grid; /*Enables grid layout*/
@@ -121,7 +205,12 @@ body { /*Affects the body contents*/
 }
 
 p {
-    font-family: Junicode, Arial, Helvetica, sans-serif;
+    font-family: Nightmare, Arial, Helvetica, sans-serif;
+    color:rgb(205, 214, 175);
+    width: 500px;
+    text-indent: 1em;
+    padding-right: 1em;
+    line-height: 0.9em;
 }
 header h1 {
     text-align: center;
@@ -157,5 +246,10 @@ h2 {
 }
 h3 {
     font-family: Pfeffer, Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+h3::first-letter {
+    font-family: Initials2, Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
